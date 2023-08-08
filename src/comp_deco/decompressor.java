@@ -22,8 +22,8 @@ public class decompressor {
     	 }
     	 
     	 gzip.close();
-    	 fis.close();
     	 fos.close();
+    	 fis.close();
     }
     
     public static void main(String[] args) throws IOException{

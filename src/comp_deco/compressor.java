@@ -21,12 +21,12 @@ public class compressor {
     	   gzip.write(buffer, 0, len);
        }
        gzip.close();
-       fis.close();
        fos.close();
+       fis.close();
    }
    
    public static void main(String[] args) throws IOException{
 	   File path=new File("C:\\Users\\ELCOT\\Desktop\\Compressor_Decompressor\\photo");
-	   method(path);
+	   method(path);	
    }
 }

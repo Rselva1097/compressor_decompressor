@@ -20,18 +20,22 @@ public class AppFrame extends JFrame implements ActionListener {
 	
 	AppFrame(){
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		compressButton = new JButton("Please select file to compress");
-		compressButton.setBounds(20, 100, 200, 30);
+		this.setLayout(null);
+		compressButton = new JButton("Select file to compress");
+		compressButton.setBounds(100, 100, 200, 30);
+		compressButton.setBackground(Color.PINK);
 		compressButton.addActionListener(this);
 		
-		decompressButton = new JButton("Please select file to decompress");
-		decompressButton.setBounds(20, 100, 200, 30);
+		decompressButton = new JButton("Select file to decompress");
+		decompressButton.setBounds(500, 100, 200, 30);
+		decompressButton.setBackground(Color.PINK);
 		decompressButton.addActionListener(this);
-		
+		//add button to the frame
 		this.add(compressButton);
 		this.add(decompressButton);
-		this.setSize(1000, 500);
-		this.getContentPane().setBackground(Color.BLACK);
+		//frame specification
+		this.setSize(1000, 1000);
+		this.getContentPane().setBackground(Color.YELLOW);
 		this.setVisible(true);
 	}
 	
@@ -48,9 +52,9 @@ public class AppFrame extends JFrame implements ActionListener {
 				System.out.println(file);
 				try {
 					compressor.method(file);
-				} catch (Exception e2) {
+				} catch (Exception ee) {
 					// TODO: handle exception
-					JOptionPane.showMessageDialog(null, e2.toString());
+					JOptionPane.showMessageDialog(null, ee.toString());
 				}
 			}
 		}
@@ -64,9 +68,9 @@ public class AppFrame extends JFrame implements ActionListener {
 				System.out.println(file);
 				try {
 					decompressor.method(file);
-				} catch (Exception e2) {
+				} catch (Exception ee) {
 					// TODO: handle exception
-					JOptionPane.showMessageDialog(null, e2.toString());
+					JOptionPane.showMessageDialog(null, ee.toString());
 				}
 			}
 		}
